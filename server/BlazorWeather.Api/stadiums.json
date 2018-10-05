@@ -4,208 +4,238 @@
     "team": "Los Angeles Angels",
     "address": "2000 Gene Autry Way, Anaheim, CA. 92806",
     "lat": 33.799572,
-    "lng": -117.889031
+    "lng": -117.889031,
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/8/8b/Los_Angeles_Angels_of_Anaheim.svg"
   },
   {
     "id": 2,
     "team": "Arizona Diamondbacks",
     "address": "P.O. Box 2095, Phoenix, AZ. 85001",
     "lat": 33.452922,
-    "lng": -112.038669
+    "lng": -112.038669,
+    "logo": "https://upload.wikimedia.org/wikipedia/de/9/9d/Arizona_Diamondbacks_Logo.svg"
   },
   {
     "id": 3,
     "team": "Atlanta Braves",
     "lat": 33.89,
-    "lng": -84.468
+    "lng": -84.468,
+    "logo": "https://upload.wikimedia.org/wikipedia/en/f/f2/Atlanta_Braves.svg"
   },
   {
     "id": 4,
     "team": "Baltimore Orioles",
     "address": "333 W. Camden Street, Baltimore, MD. 21201",
     "lat": 39.285243,
-    "lng": -76.620103
+    "lng": -76.620103,
+    "logo": "https://upload.wikimedia.org/wikipedia/de/e/e2/Baltimore_Orioles_Logo.svg"
   },
   {
     "id": 5,
     "team": "Boston Red Sox",
     "address": "4 Yawkey Way, Boston, MA 02215",
     "lat": 42.346613,
-    "lng": -71.098817
+    "lng": -71.098817,
+    "logo": "https://upload.wikimedia.org/wikipedia/en/6/6d/RedSoxPrimary_HangingSocks.svg"
   },
   {
     "id": 6,
     "team": "Chicago Cubs",
     "address": "1060 Addison Street, Chicago, IL 60616",
     "lat": 41.947201,
-    "lng": -87.656413
+    "lng": -87.656413,
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/8/80/Chicago_Cubs_logo.svg"
   },
   {
     "id": 7,
     "team": "Chicago White Sox",
     "address": "333 W. 35th Street, Chicago, IL 60616",
     "lat": 41.830883,
-    "lng": -87.635083
+    "lng": -87.635083,
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/c/c1/Chicago_White_Sox.svg"
   },
   {
     "id": 8,
     "team": "Cincinnati Reds",
     "address": "100 Cinergy Field, Cincinnati, OH 45202",
     "lat": 39.107183,
-    "lng": -84.507713
+    "lng": -84.507713,
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/0/01/Cincinnati_Reds_Logo.svg"
   },
   {
     "id": 9,
     "team": "Cleveland Indians",
     "address": "2401 Ontario Street, Cleveland, OH 44115",
     "lat": 41.495149,
-    "lng": -81.68709
+    "lng": -81.68709,
+    "logo": ""
   },
   {
     "id": 10,
     "team": "Colorado Rockies",
     "address": "Coors Field, 2001 Blake Street, Denver, CO 80205-2000",
     "lat": 39.75698,
-    "lng": -104.965329
+    "lng": -104.965329,
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/3/31/Colorado_Rockies_logo.svg"
   },
   {
     "id": 11,
     "team": "Detroit Tigers",
     "address": "Comerica Park, 2100 Woodward Ave., Detroit, MI 48201",
     "lat": 42.346354,
-    "lng": -83.059619
+    "lng": -83.059619,
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/9/94/Detroit_Tigers_Insignia.svg"
   },
   {
     "id": 12,
-    "team": "Florida Marlins",
+    "team": "Miami Marlins",
     "address": "2269 NW 199th Street, Miami, FL 33056",
     "lat": 25.954428,
-    "lng": -80.238164
+    "lng": -80.238164,
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/f/f0/Miami_Marlins_logo.svg"
   },
   {
     "id": 13,
     "team": "Houston Astros",
     "address": "P.O. Box 288, Houston, TX 77001-0288",
     "lat": 29.76045,
-    "lng": -95.369784
+    "lng": -95.369784,
+    "logo": "https://upload.wikimedia.org/wikipedia/en/0/05/Houston_Astros_Logo.svg"
   },
   {
     "id": 14,
     "team": "Kansas City Royals",
     "address": "P.O. Boz 419969, Kansas City, MO 64141",
     "lat": 39.10222,
-    "lng": -94.583559
+    "lng": -94.583559,
+    "logo": "https://upload.wikimedia.org/wikipedia/en/1/1c/Kansas_City_Royals.svg"
   },
   {
     "id": 15,
     "team": "Los Angeles Dodgers",
     "address": "1000 Elysian Park Ave., Los Angeles, CA 90012",
     "lat": 34.072437,
-    "lng": -118.246879
+    "lng": -118.246879,
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/f/f6/LA_Dodgers.svg"
   },
   {
     "id": 16,
     "team": "Milwaukee Brewers",
     "address": "P.O. Box 3099, Milwaukee, WI 53201-3099",
     "lat": 43.04205,
-    "lng": -87.905599
+    "lng": -87.905599,
+    "logo": "https://upload.wikimedia.org/wikipedia/en/1/11/Milwaukee_Brewers_Logo.svg"
   },
   {
     "id": 17,
     "team": "Minnesota Twins",
     "address": "501 Chicago Ave. S., Minneapolis, MN 55415",
     "lat": 44.974346,
-    "lng": -93.259616
+    "lng": -93.259616,
+    "logo": "https://upload.wikimedia.org/wikipedia/de/e/e3/Minnesota_Twins_Logo.svg"
   },
   {
     "id": 18,
     "team": "Washington Nationals",
     "address": "1500 South Capitol Street SE, Washington, DC",
     "lat": 38.87,
-    "lng": -77.01
+    "lng": -77.01,
+    "logo": "https://upload.wikimedia.org/wikipedia/de/7/7f/Washington-Nationals-Logo.svg"
   },
   {
     "id": 19,
     "team": "New York Mets",
     "address": "Roosevelt Ave & 126th Street, New York, NY 11368",
     "lat": 40.75535,
-    "lng": -73.843219
+    "lng": -73.843219,
+    "logo": "https://upload.wikimedia.org/wikipedia/en/7/7b/New_York_Mets.svg"
   },
   {
     "id": 20,
     "team": "New York Yankees",
     "address": "Yankee Stadium, E. 161 Street & River Ave., New York, NY 10451",
     "lat": 40.819782,
-    "lng": -73.929939
+    "lng": -73.929939,
+    "logo": "https://upload.wikimedia.org/wikipedia/en/2/25/NewYorkYankees_PrimaryLogo.svg"
   },
   {
     "id": 21,
     "team": "Oakland Athletics",
     "address": "Oakland Coliseum, 700 Coliseum Way, Oakland, Ca 94621-1918",
     "lat": 37.74923,
-    "lng": -122.196487
+    "lng": -122.196487,
+    "logo": "https://upload.wikimedia.org/wikipedia/commons/f/f9/Oakland_Athletics_logo.svg"
   },
   {
     "id": 22,
     "team": "Philadelphia Phillies",
     "address": "P.O. Box 7575, Philadelphia, PA 19101",
     "lat": 39.952313,
-    "lng": -75.162392
+    "lng": -75.162392,
+    "logo": "https://upload.wikimedia.org/wikipedia/en/8/84/Philadelphia_Phillies.svg"
   },
   {
     "id": 23,
     "team": "Pittsburgh Pirates",
     "address": "600 Stadium Circle, Pittsburgh, PA 15212",
     "lat": 40.461503,
-    "lng": -80.008924
+    "lng": -80.008924,
+    "logo": "https://upload.wikimedia.org/wikipedia/en/b/b4/Pittsburgh_Pirates_MLB_Logo.svg"
   },
   {
     "id": 24,
     "team": "St. Louis Cardinals",
     "address": "250 Stadium Plaza, St. Louis, MO 63102",
     "lat": 38.629683,
-    "lng": -90.188247
+    "lng": -90.188247,
+    "logo": "https://upload.wikimedia.org/wikipedia/en/9/9d/St._Louis_Cardinals_logo.svg"
   },
   {
     "id": 25,
     "team": "San Diego Padres",
     "address": "P.O. Box 2000, San Diego, CA 92112-2000",
     "lat": 32.752148,
-    "lng": -117.143635
+    "lng": -117.143635,
+    "logo": "https://upload.wikimedia.org/wikipedia/en/3/32/San_Diego_Padres_cap_logo.svg"
   },
   {
     "id": 26,
     "team": "San Francisco Giants",
     "address": "Pacific Bell Park, 24 Willie Mays Plaza, San Francisco, CA 94107",
     "lat": 37.77987,
-    "lng": -122.389754
+    "lng": -122.389754,
+    "logo": "https://upload.wikimedia.org/wikipedia/en/5/58/San_Francisco_Giants_Logo.svg"
   },
   {
     "id": 27,
     "team": "Seattle Mariners",
     "address": "P.O. Box 41000, 411 First Ave. S., Seattle, WA 98104",
     "lat": 47.60174,
-    "lng": -122.330829
+    "lng": -122.330829,
+    "logo": "https://upload.wikimedia.org/wikipedia/en/b/b0/Seattle_Mariners_logo.svg"
   },
   {
     "id": 28,
-    "team": "Tampa Bay Devil Rays",
+    "team": "Tampa Bay Rays",
     "address": "1 Tropicana Drive, St. Petersburg, FL 33705",
     "lat": 27.768487,
-    "lng": -82.648191
+    "lng": -82.648191,
+    "logo": "https://upload.wikimedia.org/wikipedia/en/c/c6/Tampa_Bay_Rays.svg"
   },
   {
     "id": 29,
     "team": "Texas Rangers",
     "address": "1000 Ballpark Way, Arlington, TX 76011",
     "lat": 32.750156,
-    "lng": -97.081117
+    "lng": -97.081117,
+    "logo": "https://upload.wikimedia.org/wikipedia/en/4/41/Texas_Rangers.svg"
   },
   {
     "id": 30,
     "team": "Toronto Blue Jays",
     "address": "1 Blue Jay Way, Suite 3200, Toronto, ONT M5V 1J1",
     "lat": 43.641653,
-    "lng": -79.3917
+    "lng": -79.3917,
+    "logo": "https://upload.wikimedia.org/wikipedia/en/b/b4/Toronto_Blue_Jays.svg"
   }
 ]
