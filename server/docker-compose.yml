@@ -1,0 +1,24 @@
+version: '3.4'
+
+services:
+  blazorweather.api:
+    image: ${DOCKER_REGISTRY}blazorweather.api
+    build:
+      context: .
+      dockerfile: BlazorWeather.Api\Dockerfile
+    environment:
+      - "ConnectionStrings:Default=Server=sql;User ID=sa;Password=D3vp@ssw0rd!;Database=BlazorWeather"
+    ports:
+      - "5001:80"
+  sql:
+    image: microsoft/mssql-server-windows-developer
+    volumes:
+      - c:/devdata/blazorweather:c:/data
+    expose:
+      - "1433"
+    ports:
+      - "1433:1433"
+    environment:
+      - ACCEPT_EULA=Y
+      - SA_PASSWORD=D3vp@ssw0rd!
+      - 'attach_dbs=[{"dbName": "BlazorWeather", "dbFiles": ["c:\\data\\BlazorWeather.mdf", "c:\\data\\BlazorWeather_log.ldf"]}]'
