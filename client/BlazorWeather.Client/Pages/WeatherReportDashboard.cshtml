@@ -1,0 +1,21 @@
+﻿@page "/dashboard"
+@inject HttpClient Http
+@using BlazorWeather.Api.Contracts
+
+<div class="content" style="display: flex;">
+    <WeatherReportList WeatherReports=@WeatherReports />
+</div>
+
+@functions {      
+
+    IEnumerable<WeatherReport> WeatherReports { get; set; }
+
+    protected async override Task OnInitAsync()
+    {
+        string url = "http://localhost:5001/api/weather";
+
+        var response = await Http.GetJsonAsync<List<WeatherReport>>(url);
+
+        WeatherReports = response;
+    }
+}
