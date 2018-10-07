@@ -1,0 +1,32 @@
+﻿@using BlazorWeather.Api.Contracts
+
+@if (WeatherReports != null)
+{
+<div id="reports-area" class="p-3">
+    @{ var reports = WeatherReports.Where(wr => wr.ReportTime != null); }
+
+    @foreach (var weatherReport in reports)
+    {
+        <ul class="list-group report-item">
+            <li class="list-group-item justify-content-between">
+                <div>@weatherReport.Stadium</div>
+                <img src="@weatherReport.StadiumLogo" id="stadium-logo" />
+            </li>
+            <li class="list-group-item">
+                <div class="date">
+                    <h4>@weatherReport.ReportTime?.ToString("ddd MMM d")</h4>
+                    @weatherReport.WeatherDescription
+                </div>
+                <div class="temperature">
+                    <h4>@weatherReport.TemperatureDegreesFahrenheit &deg;F</h4>
+                </div>
+            </li>
+        </ul>
+    }
+</div>
+}
+
+@functions {
+    [Parameter]
+    IEnumerable<WeatherReport> WeatherReports { get; set; } = new List<WeatherReport>();
+}
