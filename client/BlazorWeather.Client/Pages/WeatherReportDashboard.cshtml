@@ -2,7 +2,9 @@
 @inject HttpClient Http
 @using BlazorWeather.Api.Contracts
 
-<WeatherReportList WeatherReports=@WeatherReports />
+<div class="content" style="display: flex;">
+    <WeatherReportList WeatherReports=@WeatherReports />
+</div>
 
 @functions {      
 
