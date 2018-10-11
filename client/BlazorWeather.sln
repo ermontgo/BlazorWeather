@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2003
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BlazorWeather.Client", "BlazorWeather.Client\BlazorWeather.Client.csproj", "{3B1069B2-9E9C-46FB-84B9-CA763F81944F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorWeather.Client", "BlazorWeather.Client\BlazorWeather.Client.csproj", "{3B1069B2-9E9C-46FB-84B9-CA763F81944F}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorWeather.Map", "BlazorWeather.Map\BlazorWeather.Map.csproj", "{38AE9B76-3DC5-4850-A638-3BA64616F272}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{3B1069B2-9E9C-46FB-84B9-CA763F81944F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3B1069B2-9E9C-46FB-84B9-CA763F81944F}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{3B1069B2-9E9C-46FB-84B9-CA763F81944F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{38AE9B76-3DC5-4850-A638-3BA64616F272}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{38AE9B76-3DC5-4850-A638-3BA64616F272}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{38AE9B76-3DC5-4850-A638-3BA64616F272}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{38AE9B76-3DC5-4850-A638-3BA64616F272}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
