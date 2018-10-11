@@ -1,0 +1,24 @@
+﻿@using BlazorWeather.Api.Contracts;
+
+@{ 
+    var reports = WeatherReports?.Select(wr => new Pushpin() { Latitude = wr.Latitude, Longitude = wr.Longitude, Color = GetTemperatureColor(wr.TemperatureDegreesFahrenheit) }).ToArray();
+}
+
+<BingMap Pushpins=@reports />
+
+@functions {      
+
+    [Parameter]
+    IEnumerable<WeatherReport> WeatherReports { get; set; }
+
+        string GetTemperatureColor(decimal? temperatureDegreesFahrenheit)
+    {
+        var tempColor = "purple";
+        if (temperatureDegreesFahrenheit > 95) tempColor = "red";
+        else if (temperatureDegreesFahrenheit > 80) tempColor = "yellow";
+        else if (temperatureDegreesFahrenheit > 55) tempColor = "green";
+        else if (temperatureDegreesFahrenheit > 32) tempColor = "blue";
+
+        return tempColor;
+    }
+}
