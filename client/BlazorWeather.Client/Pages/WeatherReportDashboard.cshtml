@@ -4,18 +4,19 @@
 
 <div class="content" style="display: flex;">
     <WeatherReportList WeatherReports=@WeatherReports />
+    <WeatherReportMap WeatherReports=@WeatherReports />
 </div>
 
-@functions {      
+@functions {
 
-    IEnumerable<WeatherReport> WeatherReports { get; set; }
+IEnumerable<WeatherReport> WeatherReports { get; set; }
 
-    protected async override Task OnInitAsync()
-    {
-        string url = "http://localhost:5001/api/weather";
+protected async override Task OnInitAsync()
+{
+    string url = "http://localhost:5001/api/weather";
 
-        var response = await Http.GetJsonAsync<List<WeatherReport>>(url);
+    var response = await Http.GetJsonAsync<List<WeatherReport>>(url);
 
-        WeatherReports = response;
-    }
+    WeatherReports = response.Where(wr => wr.ReportTime != null);
+}
 }
