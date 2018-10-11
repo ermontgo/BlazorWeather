@@ -3,9 +3,8 @@
 @if (WeatherReports != null)
 {
 <div id="reports-area" class="p-3">
-    @{ var reports = WeatherReports.Where(wr => wr.ReportTime != null); }
 
-    @foreach (var weatherReport in reports)
+    @foreach (var weatherReport in WeatherReports)
     {
         <ul class="list-group report-item">
             <li class="list-group-item justify-content-between">
