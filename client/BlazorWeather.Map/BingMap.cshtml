@@ -1,0 +1,21 @@
+﻿@using Microsoft.JSInterop
+
+<div id='myMap' style='width: 100%; height: 100%;' ref="mapElement"></div>
+
+@functions {      
+
+    ElementRef mapElement;
+
+    [Parameter]
+    IEnumerable<Pushpin> Pushpins { get; set; }
+
+    protected override async Task OnAfterRenderAsync()
+    {
+        await JSRuntime.Current.InvokeAsync<bool>("maps.initializeMapElement", mapElement, Pushpins);
+    }
+
+    protected override async Task OnParametersSetAsync()
+    {
+        await JSRuntime.Current.InvokeAsync<bool>("maps.registerPushpins", mapElement, Pushpins);
+    }
+}
