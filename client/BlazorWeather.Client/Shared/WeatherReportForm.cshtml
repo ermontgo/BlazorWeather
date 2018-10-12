@@ -1,0 +1,72 @@
+﻿@inject HttpClient Http
+
+@if ((StadiumNames?.Count ?? 0) > 0)
+{
+<ul class="list-group report-item">
+    @*Stadium - Combo Box*@
+
+    <select bind="@Stadium" class="list-group-item">
+        @foreach (var stadium in StadiumNames)
+        {
+            <option value="@stadium">@stadium</option>
+        }
+    </select>
+    @*Conditions - Combo Box*@
+    <div class="list-group-item" style="display: flex;">
+        <select bind="@CurrentConditions">
+            @foreach (var condition in Conditions)
+            {
+                <option value="@condition">@condition</option>
+            }
+        </select>
+        <input type="text" bind="@Temperature" placeholder="Temperature (F)" />
+    </div>
+
+    @*Email - Text*@
+    <input type="text" bind="@Email" class="list-group-item" placeholder="Email Address" />
+    @*Submit*@
+    <input type="button" onclick="@(_ => PostReport())" class="list-group-item" value="Submit" />
+</ul>
+}
+
+
+@functions {
+    List<string> StadiumNames { get; set; }
+
+    string Stadium { get; set; }
+    string CurrentConditions { get; set; }
+    string Temperature { get; set; }
+    string Email { get; set; }
+
+    IEnumerable<string> Conditions = new[]
+    {
+"Rain", "Snow", "Sunny", "Overcast"
+};
+
+    protected override async Task OnInitAsync()
+    {
+        string url = "http://localhost:5001/api/stadiums";
+
+        var response = await Http.GetJsonAsync<List<BlazorWeather.Api.Contracts.Stadium>>(url);
+
+        StadiumNames = response.Select(s => s.Name).ToList();
+    }
+
+    async Task PostReport()
+    {
+        var report = new BlazorWeather.Api.Contracts.WeatherReport()
+        {
+            Stadium = Stadium,
+            ReportTime = DateTimeOffset.Now,
+            WeatherDescription = CurrentConditions,
+            TemperatureDegreesFahrenheit = Convert.ToDecimal(Temperature),
+            EmailAddress = Email
+        };
+
+        await Http.PostJsonAsync("http://localhost:5001/api/weather", report);
+
+        Stadium = string.Empty;
+        CurrentConditions = string.Empty;
+        Temperature = string.Empty;
+    }
+}
