@@ -16,6 +16,7 @@ namespace BlazorWeather.Client.Store
 
         public GetStadiumsCompleteAction(List<Stadium> stadia)
         {
+            IsSuccess = true;
             Stadiums = stadia;
         }
 
