@@ -14,7 +14,7 @@ namespace BlazorWeather.Client.Store
 
             if (action.IsSuccess)
             {
-                newState.Reports = action.WeatherReports;
+                newState.Reports = action.WeatherReports.Where(wr => wr.ReportTime != null).ToList();
             }
             else
             {
