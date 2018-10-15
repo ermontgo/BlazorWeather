@@ -1,22 +1,18 @@
 ﻿@page "/dashboard"
 @inject HttpClient Http
-@using BlazorWeather.Api.Contracts
+
+@inject IState<AppState> State
+@inject IDispatcher Dispatcher
 
 <div class="content" style="display: flex;">
-    <WeatherReportList WeatherReports=@WeatherReports />
-    <WeatherReportMap WeatherReports=@WeatherReports />
+    <WeatherReportList WeatherReports=@State.Value.Reports />
+    <WeatherReportMap WeatherReports=@State.Value.Reports />
 </div>
 
-@functions {
-
-IEnumerable<WeatherReport> WeatherReports { get; set; }
-
-protected async override Task OnInitAsync()
-{
-    string url = "http://localhost:5001/api/weather";
-
-    var response = await Http.GetJsonAsync<List<WeatherReport>>(url);
-
-    WeatherReports = response.Where(wr => wr.ReportTime != null);
-}
+@functions { 
+    protected override void OnInit()
+    {
+        State.Subscribe(this);
+        Dispatcher.Dispatch(new GetWeatherReportsAction());
+    }
 }
