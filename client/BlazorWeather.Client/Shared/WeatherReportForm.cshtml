@@ -1,55 +1,49 @@
 ﻿@inject HttpClient Http
+@inject IState<AppState> State
+@inject IDispatcher Dispatcher
 
-@if ((StadiumNames?.Count ?? 0) > 0)
+
+@if ((State.Value.Stadiums?.Count ?? 0) > 0)
 {
-<ul class="list-group report-item">
-    @*Stadium - Combo Box*@
+    <ul class="list-group report-item">
+        @*Stadium - Combo Box*@
 
-    <select bind="@Stadium" class="list-group-item">
-        @foreach (var stadium in StadiumNames)
-        {
-            <option value="@stadium">@stadium</option>
-        }
-    </select>
-    @*Conditions - Combo Box*@
-    <div class="list-group-item" style="display: flex;">
-        <select bind="@CurrentConditions">
-            @foreach (var condition in Conditions)
+        <select bind="@Stadium" class="list-group-item">
+            @foreach (var stadium in State.Value.Stadiums)
             {
-                <option value="@condition">@condition</option>
+                <option value="@stadium.Name">@stadium.Name</option>
             }
         </select>
-        <input type="text" bind="@Temperature" placeholder="Temperature (F)" />
-    </div>
+        @*Conditions - Combo Box*@
+        <div class="list-group-item" style="display: flex;">
+            <select bind="@CurrentConditions">
+                @foreach (var condition in State.Value.Conditions)
+                {
+                    <option value="@condition">@condition</option>
+                }
+            </select>
+            <input type="text" bind="@Temperature" placeholder="Temperature (F)" />
+        </div>
 
-    @*Email - Text*@
-    <input type="text" bind="@Email" class="list-group-item" placeholder="Email Address" />
-    @*Submit*@
-    <input type="button" onclick="@(_ => PostReport())" class="list-group-item" value="Submit" />
-</ul>
+        @*Email - Text*@
+        <input type="text" bind="@Email" class="list-group-item" placeholder="Email Address" />
+        @*Submit*@
+        <input type="button" onclick="@(_ => PostReport())" class="list-group-item" value="Submit" />
+    </ul>
 }
 
 
 @functions {
-    List<string> StadiumNames { get; set; }
 
     string Stadium { get; set; }
     string CurrentConditions { get; set; }
     string Temperature { get; set; }
     string Email { get; set; }
 
-    IEnumerable<string> Conditions = new[]
-    {
-"Rain", "Snow", "Sunny", "Overcast"
-};
-
     protected override async Task OnInitAsync()
     {
-        string url = "http://localhost:5001/api/stadiums";
-
-        var response = await Http.GetJsonAsync<List<BlazorWeather.Api.Contracts.Stadium>>(url);
-
-        StadiumNames = response.Select(s => s.Name).ToList();
+        State.Subscribe(this);
+        Dispatcher.Dispatch(new GetStadiumsAction());
     }
 
     async Task PostReport()
@@ -63,7 +57,7 @@
             EmailAddress = Email
         };
 
-        await Http.PostJsonAsync("http://localhost:5001/api/weather", report);
+        Dispatcher.Dispatch(new AddReportAction(report));
 
         Stadium = string.Empty;
         CurrentConditions = string.Empty;
