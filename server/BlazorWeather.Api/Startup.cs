@@ -40,6 +40,8 @@ namespace BlazorWeather.Api
 
             dbContext.Database.EnsureCreated();
 
+            app.UseCors(policy => policy.AllowAnyHeader().AllowAnyMethod().AllowAnyOrigin());
+
             app.UseMvc();
         }
     }
